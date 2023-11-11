@@ -3,7 +3,6 @@ import Image from 'next/image'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import bgFloral from '@/images/background-floral.png'
-import bgFloralMobile from '@/images/background-floral-mobile.png'
 
 export function Hero() {
   return (
@@ -11,14 +10,7 @@ export function Hero() {
       <Image
         src={bgFloral}
         alt=""
-        className="absolute inset-0 hidden lg:block"
-        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-        priority
-      />
-      <Image
-        src={bgFloralMobile}
-        alt=""
-        className="absolute inset-0 block lg:hidden"
+        className="absolute inset-0"
         style={{ width: '100%', height: '100%', objectFit: 'cover' }}
         priority
       />
@@ -26,6 +18,7 @@ export function Hero() {
       <div className="relative rounded-lg bg-white/50 px-5 py-10 backdrop-blur-[5px] lg:bg-white/40 lg:backdrop-blur">
         <h1 className="relative mx-auto max-w-4xl font-display text-3xl font-medium text-amber-950 lg:text-7xl">
           <span className="tracking-widest">FLOWERSTORY</span>
+          <br />
           <span className="relative whitespace-nowrap text-amber-700">
             <svg
               aria-hidden="true"
