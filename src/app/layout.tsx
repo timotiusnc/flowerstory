@@ -1,4 +1,4 @@
-import { Inter, Lexend } from 'next/font/google'
+import { Inter, Crimson_Text } from 'next/font/google'
 import clsx from 'clsx'
 
 import '@/styles/tailwind.css'
@@ -19,10 +19,11 @@ const inter = Inter({
   variable: '--font-inter',
 })
 
-const lexend = Lexend({
+const lexend = Crimson_Text({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-lexend',
+  weight: '400',
 })
 
 export default function RootLayout({
