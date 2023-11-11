@@ -24,7 +24,7 @@ export function Hero() {
       />
 
       <div className="relative rounded-lg bg-white/50 px-5 py-10 backdrop-blur-[5px] lg:bg-white/40 lg:backdrop-blur">
-        <h1 className="relative mx-auto max-w-4xl font-display text-4xl font-medium text-amber-950 lg:text-7xl">
+        <h1 className="relative mx-auto max-w-4xl font-display text-3xl font-medium text-amber-950 lg:text-7xl">
           <span className="tracking-widest">FLOWERSTORY</span>
           <span className="relative whitespace-nowrap text-amber-700">
             <svg
@@ -38,7 +38,7 @@ export function Hero() {
             <span className="relative">floral works</span>
           </span>{' '}
         </h1>
-        <h2 className="relative mx-auto mt-6 max-w-2xl font-display text-2xl font-semibold text-amber-950 lg:text-3xl">
+        <h2 className="relative mx-auto mt-6 max-w-2xl font-display text-xl font-semibold text-amber-950 lg:text-3xl">
           Every Petal Tells a Tale
         </h2>
         <p className="relative mx-auto mt-6 hidden max-w-2xl text-base tracking-tighter text-amber-950 lg:block lg:text-lg">
