@@ -2,6 +2,7 @@
 
 import { Fragment } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 
@@ -10,7 +11,6 @@ import { Container } from '@/components/Container'
 import { NavLink } from '@/components/NavLink'
 
 import logo from '@/images/logo.png'
-import Image from 'next/image'
 
 function MobileNavLink({
   href,
@@ -20,7 +20,13 @@ function MobileNavLink({
   children: React.ReactNode
 }) {
   return (
-    <Popover.Button as={Link} href={href} className="block w-full p-2">
+    <Popover.Button
+      as={Link}
+      href={href}
+      target="_blank"
+      rel="noopener"
+      className="block w-full p-2"
+    >
       {children}
     </Popover.Button>
   )
@@ -91,7 +97,9 @@ function MobileNavigation() {
             <MobileNavLink href="#collections">Catalog</MobileNavLink>
             <MobileNavLink href="#testimonials">What They Said</MobileNavLink>
             <hr className="m-2 border-slate-300/40" />
-            <MobileNavLink href="/login">Sign in</MobileNavLink>
+            <MobileNavLink href="https://flowerstoryco.id/account/login">
+              Sign in
+            </MobileNavLink>
           </Popover.Panel>
         </Transition.Child>
       </Transition.Root>
@@ -117,7 +125,7 @@ export function Header() {
             </Link>
           </div>
           <div className="absolute left-1/2 hidden -translate-x-1/2 justify-center md:flex md:gap-x-6">
-            <div className="rounded-lg bg-white/50 p-2 backdrop-blur">
+            <div className="rounded-lg bg-white/50 p-2 font-semibold backdrop-blur">
               <NavLink href="#onsale">On Sale</NavLink>
               <NavLink href="#collections">Catalog</NavLink>
               <NavLink href="#testimonials">What They Said</NavLink>
