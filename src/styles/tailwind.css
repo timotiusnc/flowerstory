@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#testimonials {
+  background: radial-gradient(circle at 85% 35%, #acfcfdb8, transparent 25%),
+    radial-gradient(circle at 15% 55%, #f9fdd6d1, transparent 25%),
+    radial-gradient(circle at 55% 80%, #ecdeff, transparent 25%);
+}

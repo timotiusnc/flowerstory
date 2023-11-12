@@ -7,8 +7,10 @@ import clsx from 'clsx'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
-import { Logo } from '@/components/Logo'
 import { NavLink } from '@/components/NavLink'
+
+import logo from '@/images/logo.png'
+import Image from 'next/image'
 
 function MobileNavLink({
   href,
@@ -85,9 +87,9 @@ function MobileNavigation() {
             as="div"
             className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
           >
-            <MobileNavLink href="#features">Features</MobileNavLink>
-            <MobileNavLink href="#testimonials">Testimonials</MobileNavLink>
-            <MobileNavLink href="#pricing">Pricing</MobileNavLink>
+            <MobileNavLink href="#onsale">On Sale</MobileNavLink>
+            <MobileNavLink href="#collections">Catalog</MobileNavLink>
+            <MobileNavLink href="#testimonials">What They Said</MobileNavLink>
             <hr className="m-2 border-slate-300/40" />
             <MobileNavLink href="/login">Sign in</MobileNavLink>
           </Popover.Panel>
@@ -103,23 +105,32 @@ export function Header() {
       <Container>
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
-            <Link href="#" aria-label="Home">
-              <Logo className="h-10 w-auto" />
+            <Link href="#" aria-label="Home" className="flex items-center">
+              <Image
+                src={logo}
+                alt="FlowerStory Logo"
+                className="h-10 w-auto"
+              />
+              <span className="ml-2 rounded-lg  p-2 font-display text-lg uppercase lg:bg-transparent lg:p-0 lg:text-xl lg:backdrop-blur-none">
+                FlowerStory
+              </span>
             </Link>
-            <div className="hidden rounded-lg bg-white/50 p-2 backdrop-blur md:flex md:gap-x-6">
-              <NavLink href="#features">Features</NavLink>
-              <NavLink href="#testimonials">Testimonials</NavLink>
-              <NavLink href="#pricing">Pricing</NavLink>
+          </div>
+          <div className="absolute left-1/2 hidden -translate-x-1/2 justify-center md:flex md:gap-x-6">
+            <div className="rounded-lg bg-white/50 p-2 backdrop-blur">
+              <NavLink href="#onsale">On Sale</NavLink>
+              <NavLink href="#collections">Catalog</NavLink>
+              <NavLink href="#testimonials">What They Said</NavLink>
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
-            <div className="hidden md:block">
-              <NavLink href="/login">Sign in</NavLink>
-            </div>
-            <Button href="/register" color="blue">
-              <span>
-                Get started <span className="hidden lg:inline">today</span>
-              </span>
+            <Button
+              href="https://flowerstoryco.id/account/login"
+              color="amber"
+              target="_blank"
+              rel="noopener"
+            >
+              <span>Sign In</span>
             </Button>
             <div className="-mr-1 md:hidden">
               <MobileNavigation />

@@ -3,7 +3,9 @@ import Image from 'next/image'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import bgFloral from '@/images/background-floral.jpg'
+import bgFloralMobile from '@/images/background-floral-mobile.jpg'
 import { WhatsAppLogo } from './logo/Whatsapp'
+import { InstagramSvg } from './logo/InstagramSvg'
 
 export function Hero() {
   return (
@@ -11,7 +13,13 @@ export function Hero() {
       <Image
         src={bgFloral}
         alt=""
-        className="absolute inset-0 h-full min-h-[750px] w-full object-cover"
+        className="absolute inset-0 hidden h-full min-h-[750px] w-full object-cover lg:block"
+        priority
+      />
+      <Image
+        src={bgFloralMobile}
+        alt=""
+        className="absolute inset-0 block h-full w-full object-cover lg:hidden"
         priority
       />
 
@@ -36,18 +44,29 @@ export function Hero() {
         <h2 className="relative mx-auto mt-6 max-w-2xl font-display text-xl font-semibold text-amber-950 lg:text-3xl">
           Every Petal Tells a Tale
         </h2>
-        <p className="relative mx-auto mt-6 block max-w-2xl text-sm tracking-tighter text-amber-950 lg:text-lg">
+        <p className="relative mx-auto mt-6 hidden max-w-2xl text-sm tracking-tighter text-amber-950 lg:block lg:text-lg">
           Experience the art of floral elegance with our bespoke arrangement
           services, tailor-made to add a touch of beauty and emotion to every
           occasion.
         </p>
-        <div className="relative flex justify-center gap-x-6 py-10">
+        <div className="relative flex flex-wrap justify-center gap-6 py-10">
           <Button
             href={generateWALink({ phone: '6287788860777' })}
             color="white"
+            target="_blank"
+            rel="noopener"
           >
             <WhatsAppLogo className="w-6" />
             <span className="ml-3 font-bold">Contact Us</span>
+          </Button>
+          <Button
+            href="https://instagram.com/flowerstory_co"
+            color="white"
+            target="_blank"
+            rel="noopener"
+          >
+            <InstagramSvg className="w-6" />
+            <span className="ml-3 font-bold">Explore our IG</span>
           </Button>
         </div>
       </div>

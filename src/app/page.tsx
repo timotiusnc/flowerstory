@@ -10,6 +10,8 @@ import { Pricing } from '@/components/Pricing'
 import { PrimaryFeatures } from '@/components/PrimaryFeatures'
 import { SecondaryFeatures } from '@/components/SecondaryFeatures'
 import { Testimonials } from '@/components/Testimonials'
+import { WhatTheySaid } from '@/components/WhatTheySaid'
+import { Location } from '@/components/Location'
 
 export default function Home() {
   return (
@@ -20,12 +22,8 @@ export default function Home() {
         <OnSale />
         <Collections />
         <Carousel />
-        <PrimaryFeatures />
-        <SecondaryFeatures />
-        <CallToAction />
-        <Testimonials />
-        <Pricing />
-        <Faqs />
+        <WhatTheySaid />
+        <Location />
       </main>
       <Footer />
     </>

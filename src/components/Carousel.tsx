@@ -9,8 +9,8 @@ import five from '@/images/carousel/5.jpg'
 export function Carousel() {
   return (
     <section
-      id="onsale"
-      aria-label="Discover what's on sale"
+      id="carousel"
+      aria-label="Carousel"
       className="relative overflow-hidden bg-white"
     >
       <div className="flex snap-x snap-mandatory gap-8 overflow-scroll">

@@ -10,6 +10,8 @@ const onSales = [
     isStart: false,
     price: '350.000,00',
     strike: '375.000',
+    external_url:
+      'https://flowerstoryco.id/collections/on-sale/products/assez-violet',
   },
   {
     url: 'https://flowerstoryco.id/cdn/shop/products/8C1D4C5A-D442-49D1-AF8E-787D1F3F73BA-4326-000002BCEE799746_540x.jpg?v=1698649408',
@@ -17,6 +19,8 @@ const onSales = [
     isStart: true,
     price: '175.000,00',
     strike: '225.000',
+    external_url:
+      'https://flowerstoryco.id/collections/on-sale/products/mini-hydra',
   },
   {
     url: 'https://flowerstoryco.id/cdn/shop/products/Felicite_Peach_325_540x.jpg?v=1699327369',
@@ -24,6 +28,8 @@ const onSales = [
     isStart: true,
     price: '350.000,00',
     strike: '400.000',
+    external_url:
+      'https://flowerstoryco.id/collections/on-sale/products/felicite',
   },
   {
     url: 'https://flowerstoryco.id/cdn/shop/products/2022_0308_09331200_540x.jpg?v=1647401538',
@@ -31,6 +37,8 @@ const onSales = [
     isStart: true,
     price: '400.000,00',
     strike: '450.000',
+    external_url:
+      'https://flowerstoryco.id/collections/on-sale/products/hydra-rose',
   },
   {
     url: 'https://flowerstoryco.id/cdn/shop/products/AFCDE74D-787E-4EDA-BE65-6C8EF2498D7C-1385-000000E2CE9D4B40_540x.jpg?v=1613895651',
@@ -38,6 +46,8 @@ const onSales = [
     isStart: false,
     price: '450.000,00',
     strike: '500.000',
+    external_url:
+      'https://flowerstoryco.id/collections/on-sale/products/joyeuse-belle',
   },
   {
     url: 'https://flowerstoryco.id/cdn/shop/files/IMG-20231110_111323_526_540x.jpg?v=1699589874',
@@ -45,6 +55,8 @@ const onSales = [
     isStart: false,
     price: '425.000,00',
     strike: '575.000',
+    external_url:
+      'https://flowerstoryco.id/collections/on-sale/products/orchid-sakura',
   },
   {
     url: 'https://flowerstoryco.id/cdn/shop/products/Deepend_540x.jpg?v=1626168752',
@@ -52,6 +64,8 @@ const onSales = [
     isStart: false,
     price: '325.000,00',
     strike: '350.000',
+    external_url:
+      'https://flowerstoryco.id/collections/on-sale/products/deepend',
   },
   {
     url: 'https://flowerstoryco.id/cdn/shop/products/2021_1005_16292700_540x.jpg?v=1633424795',
@@ -59,6 +73,8 @@ const onSales = [
     isStart: false,
     price: '300.000,00',
     strike: '350.000',
+    external_url:
+      'https://flowerstoryco.id/collections/on-sale/products/petite-orange',
   },
 ]
 
@@ -67,7 +83,7 @@ export function OnSale() {
     <section
       id="onsale"
       aria-label="Discover what's on sale"
-      className="relative overflow-hidden bg-white py-7 lg:py-20"
+      className="relative overflow-hidden bg-white py-7 lg:py-10"
     >
       <Container>
         <h1 className="mb-12 text-center font-display text-3xl lg:text-4xl">
@@ -82,6 +98,7 @@ export function OnSale() {
               isStart={onSale.isStart}
               price={onSale.price}
               strike={onSale.strike}
+              external_url={onSale.external_url}
             />
           ))}
         </div>
@@ -96,15 +113,17 @@ function Flower({
   isStart,
   price,
   strike,
+  external_url,
 }: {
   url: string
   name: string
   isStart: boolean
   price: string
   strike: string
+  external_url: string
 }) {
   return (
-    <Link href="/shop">
+    <Link href={external_url} target="_blank" rel="noopener">
       <div className="flex flex-col gap-4 font-display">
         <div className="relative flex min-h-[150px] min-w-[150px] flex-col-reverse rounded-lg px-3 py-1 shadow-md hover:shadow-xl lg:min-h-[250px] lg:min-w-[250px]">
           <Image
