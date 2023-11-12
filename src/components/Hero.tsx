@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import bgFloral from '@/images/background-floral.png'
+import { WhatsAppLogo } from './logo/Whatsapp'
 
 export function Hero() {
   return (
@@ -10,14 +11,15 @@ export function Hero() {
       <Image
         src={bgFloral}
         alt=""
-        className="absolute inset-0"
-        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+        className="absolute inset-0 h-full min-h-[750px] w-full object-cover"
         priority
       />
 
       <div className="relative rounded-lg bg-white/50 px-5 py-10 backdrop-blur-[5px] lg:bg-white/40 lg:backdrop-blur">
         <h1 className="relative mx-auto max-w-4xl font-display text-3xl font-medium text-amber-950 lg:text-7xl">
-          <span className="tracking-widest">FLOWERSTORY</span>
+          <span className="bg-gradient-to-b from-amber-950 to-amber-700 bg-clip-text tracking-widest text-transparent">
+            FLOWERSTORY
+          </span>
           <br />
           <span className="relative whitespace-nowrap text-amber-700">
             <svg
@@ -34,27 +36,34 @@ export function Hero() {
         <h2 className="relative mx-auto mt-6 max-w-2xl font-display text-xl font-semibold text-amber-950 lg:text-3xl">
           Every Petal Tells a Tale
         </h2>
-        <p className="relative mx-auto mt-6 hidden max-w-2xl text-base tracking-tighter text-amber-950 lg:block lg:text-lg">
+        <p className="relative mx-auto mt-6 block max-w-2xl text-sm tracking-tighter text-amber-950 lg:text-lg">
           Experience the art of floral elegance with our bespoke arrangement
           services, tailor-made to add a touch of beauty and emotion to every
           occasion.
         </p>
         <div className="relative flex justify-center gap-x-6 py-10">
-          <Button href="/register">Get 6 months free</Button>
           <Button
-            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-            variant="outline"
+            href={generateWALink({ phone: '6287788860777' })}
+            color="white"
           >
-            <svg
-              aria-hidden="true"
-              className="h-3 w-3 flex-none fill-blue-600 group-active:fill-current"
-            >
-              <path d="m9.997 6.91-7.583 3.447A1 1 0 0 1 1 9.447V2.553a1 1 0 0 1 1.414-.91L9.997 5.09c.782.355.782 1.465 0 1.82Z" />
-            </svg>
-            <span className="ml-3">Watch video</span>
+            <WhatsAppLogo className="w-6" />
+            <span className="ml-3 font-bold">Contact Us</span>
           </Button>
         </div>
       </div>
     </Container>
   )
+}
+
+const defaultWAText =
+  'Halo Flower Story, saya dapat kontak ini dari https://flowerstory.vercel.app. Saya ingin pesan karangan bunga.'
+
+export const generateWALink = ({
+  phone,
+  text,
+}: {
+  phone: string
+  text?: string
+}) => {
+  return `https://wa.me/${phone}?text=${text ?? defaultWAText}`
 }

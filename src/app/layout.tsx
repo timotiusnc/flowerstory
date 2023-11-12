@@ -6,11 +6,11 @@ import { type Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - TaxPal',
-    default: 'TaxPal - Accounting made simple for small businesses',
+    template: '%s - FlowerStory',
+    default: 'FlowerStory - Every petal tells a tale',
   },
   description:
-    'Most bookkeeping software is accurate, but hard to use. We make the opposite trade-off, and hope you don’t get audited.',
+    'Flower delivery available in Jakarta, Tangerang, Bekasi, and Depok. We offer fresh and dried flowers for all occasions: birthdays, anniversaries, grand openings, weddings, graduations, and more. Same-day delivery available.',
 }
 
 const inter = Inter({
@@ -23,7 +23,7 @@ const lexend = Crimson_Text({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-lexend',
-  weight: '400',
+  weight: ['400', '600', '700'],
 })
 
 export default function RootLayout({
