@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: 'opengraph-image.jpg',
+        url: 'https://flowerstory.vercel.app/opengraph-image.jpg',
         type: 'image/jpeg',
         width: 1200,
         height: 600,
