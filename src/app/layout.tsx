@@ -9,6 +9,16 @@ export const metadata: Metadata = {
     template: '%s - FlowerStory',
     default: 'FlowerStory - Every petal tells a tale',
   },
+  openGraph: {
+    images: [
+      {
+        url: 'opengraph-image.jpg',
+        type: 'image/jpeg',
+        width: 1200,
+        height: 600,
+      },
+    ],
+  },
   description:
     'Flower delivery available in Jakarta, Tangerang, Bekasi, and Depok. We offer fresh and dried flowers for all occasions: birthdays, anniversaries, grand openings, weddings, graduations, and more. Same-day delivery available.',
 }
