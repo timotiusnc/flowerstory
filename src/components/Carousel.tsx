@@ -1,10 +1,10 @@
 import Image from 'next/image'
 
-import one from '@/images/carousel/1.png'
-import two from '@/images/carousel/2.png'
-import three from '@/images/carousel/3.png'
-import four from '@/images/carousel/4.png'
-import five from '@/images/carousel/5.png'
+import one from '@/images/carousel/1.jpg'
+import two from '@/images/carousel/2.jpg'
+import three from '@/images/carousel/3.jpg'
+import four from '@/images/carousel/4.jpg'
+import five from '@/images/carousel/5.jpg'
 
 export function Carousel() {
   return (

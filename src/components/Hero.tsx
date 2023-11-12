@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
-import bgFloral from '@/images/background-floral.png'
+import bgFloral from '@/images/background-floral.jpg'
 import { WhatsAppLogo } from './logo/Whatsapp'
 
 export function Hero() {
