@@ -1,4 +1,5 @@
 import { CallToAction } from '@/components/CallToAction'
+import { Carousel } from '@/components/Carousel'
 import { Collections } from '@/components/Collections'
 import { Faqs } from '@/components/Faqs'
 import { Footer } from '@/components/Footer'
@@ -18,6 +19,7 @@ export default function Home() {
         <Hero />
         <OnSale />
         <Collections />
+        <Carousel />
         <PrimaryFeatures />
         <SecondaryFeatures />
         <CallToAction />

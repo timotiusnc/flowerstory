@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import { Container } from './Container'
-import clsx from 'clsx'
 import Link from 'next/link'
 
 const collections = [
