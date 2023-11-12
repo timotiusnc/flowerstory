@@ -71,7 +71,7 @@ function Flower({ url, name }: { url: string; name: string }) {
   return (
     <Link href="/shop">
       <div className="flex flex-col gap-4 font-display">
-        <div className="relative grid min-h-[150px] min-w-[150px] place-items-center rounded-lg px-3 py-1 shadow-md hover:shadow-xl lg:min-h-[300px] lg:min-w-[300px]">
+        <div className="relative flex min-h-[150px] min-w-[150px] items-center justify-center rounded-lg px-3 py-1 shadow-md hover:shadow-xl lg:min-h-[300px] lg:min-w-[300px]">
           <Image
             alt="Flower"
             src={url}
@@ -80,11 +80,9 @@ function Flower({ url, name }: { url: string; name: string }) {
             className="absolute inset-0 rounded-lg"
             style={{ width: '100%', height: '100%' }}
           />
-          <div className="">
-            <div className="absolute inset-0 min-h-full min-w-full rounded-lg bg-black/25 hover:bg-black/40"></div>
-            <div className="relative text-lg leading-3 text-white lg:text-2xl">
-              {name}
-            </div>
+          <div className="absolute inset-0 min-h-full min-w-full rounded-lg bg-black/25 hover:bg-black/40"></div>
+          <div className="relative text-lg leading-3 text-white lg:text-2xl">
+            {name}
           </div>
         </div>
       </div>
