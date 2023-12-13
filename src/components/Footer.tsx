@@ -34,7 +34,7 @@ export function Footer() {
               target="_blank"
               rel="noopener"
               className="group"
-              aria-label="TaxPal on Twitter"
+              aria-label="FlowerStory on Instagram"
             >
               <InstagramSvg className="h-6 w-6 fill-slate-500" />
             </Link>

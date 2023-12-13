@@ -60,28 +60,22 @@ function Testi({
 }) {
   return (
     <div className="flex max-w-xs flex-col gap-4 font-display">
-      <div className="relative flex  items-center justify-center">
-        <Link
-          href={`https://instagram.com/${name}`}
-          target="_blank"
-          rel="noreferer"
-        >
-          <Image
-            alt="Flower"
-            src={url}
-            width={200}
-            height={300}
-            className="rounded-lg shadow-md hover:underline hover:shadow-xl"
-            style={{ width: '100%', height: '100%' }}
-          />
-        </Link>
-      </div>
       <Link
         href={`https://instagram.com/${name}`}
         target="_blank"
         rel="noreferer"
       >
-        <div className="text-lg text-slate-800 hover:underline lg:text-xl">{`@${name}`}</div>
+        <div className="group flex flex-col gap-2">
+          <Image
+            alt="Flower"
+            src={url}
+            width={200}
+            height={300}
+            className="h-full w-full rounded-lg shadow-md group-hover:shadow-xl"
+          />
+
+          <div className="text-lg text-slate-800 group-hover:underline lg:text-xl">{`@${name}`}</div>
+        </div>
       </Link>
       <div className="italic text-slate-800">{testi}</div>
     </div>
